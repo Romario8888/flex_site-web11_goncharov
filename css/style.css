@@ -1,11 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
-font-family: 'Marutya' ;
-src: url('../fonts/Marutya.ttf') format("truetype");
+  font-family: steamy;
+  src: url(fonts/Steamy.otf);
 }
 
 body {
-    font-family: 'Marutya' ;
+  margin: 0;
+  font-family: steamy;
 }
+
+header {
+  padding: 60px;
+  text-align: center;
+  background-color: #1b8360;
+  color: azure;
+}
+
+nav {
+  display: flex;
+  background-color: #333;
+  height: 50px;
+}
+
 nav ul {
-    list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: darkgray;
+  background-color: white;
+}
+
+nav label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav label,
+.checkbox-menu {
+  display: none;
+}
+
+.row {
+  display: flex;
+  /*    flex-wrap: wrap;*/
+}
+
+.row aside {
+  flex: 0 1 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.row main {
+  flex: 0 1 70%;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.fake-img img {
+  width: 100%;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #1b8360;
+}
+
+@media screen and (max-width: 768px) {
+  .row,
+  ul {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: none;
+    user-select: none;
+    padding: 0;
+  }
+  nav label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ebebf2;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    background-color: bisque;
+  }
+
+  nav ul a {
+    display: flex;
+    justify-content: center;
+    color: #000;
+  }
+
+  label .toggle {
+    color: aquamarine;
+    font-size: 30px;
+  }
+
+  .checkbox-menu:checked ~ ul {
+    display: flex;
+    z-index: 1;
+    color: ;
+  }
 }
