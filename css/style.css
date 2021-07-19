@@ -1,0 +1,11 @@
+@font-face {
+font-family: 'Marutya' ;
+src: url('../fonts/Marutya.ttf') format("truetype");
+}
+
+body {
+    font-family: 'Marutya' ;
+}
+nav ul {
+    list-style-type: none;
+}
